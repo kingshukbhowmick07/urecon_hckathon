@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans+SC:wght@300;400&family=Anton&family=Barlow:wght@300&family=Bebas+Neue&family=Cormorant+SC:wght@300;400;500;600;700&family=Cuprum:wght@400;500&family=Goldman:wght@400;700&family=Josefin+Slab:wght@300;400;600&family=Kanit:wght@500&family=Lato:wght@300;400;700&family=Lobster&family=Philosopher:wght@400;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Secular+One&family=Teko:wght@300;400;500&family=Unna:wght@400;700&display=swap"
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AlphaBites: get global updates and articles</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="logo.png" alt="" class="logo">
+        <div class="circleld">
+            <h1>α</h1>
+        </div>
+        <div class="iconset">
+
+            <i class="fa-solid fa-moon"></i>
+            <div class="userlogo"><i class="fa-solid fa-user"></i></div>
+        </div>
+    </div>
+    <section class="cont">
+        <h2>Latest Updates</h2>
+        <div class="tele">
+            <div class="segment article">
+                <h2>Top Articles</h2>
+                <div class="mySwiper">
+                </div>
+            </div>
+            <div class="segment wide">
+                <swiper-container class="mySwiper" direction="vertical" space-between="30" mousewheel="true" loop="true"
+                    autoplay-delay="12000" autoplay-disable-on-interaction="false">
+
+                </swiper-container>
+            </div>
+            <div class="segment headlines">
+                <h2>Headlines</h2>
+                <div class="mySwiper">
+
+                </div>
+
+            </div>
+            <div class="segment thisday">
+                <h2>On this Day</h2>
+                <div class="mySwiper">
+
+                </div>
+            </div>
+    </section>
+    <section class="discover">
+        <h2>Discover top articles on:</h2>
+        <div class="topics">
+            <div class="topic active">Technology</div>
+            <div class="topic">Business</div>
+            <div class="topic ">Science</div>
+            <div class="topic ">Politics</div>
+            <div class="topic ">India</div>
+            <div class="topic ">Nature</div>
+            <div class="topic ">Pop-culture</div>
+            <div class="topic ">general</div>
+            <div class="topic ">Cryptocurrency</div>
+            <div class="topic ">NFT</div>
+            <div class="topic ">Stock Market</div>
+            <div class="topic">Food</div>
+            <div class="topic">Startups</div>
+            <div class="topic">Games</div>
+            <div class="topic">Sports</div>
+            <div class="topic">Entertainment</div>
+        </div>
+        <h2>View Top Headlines from:</h2>
+        <div class="topics">
+            <div class="topic1 active" data-query="us">United States</div>
+            <div class="topic1" data-query="in">India</div>
+            <div class="topic1 " data-query="za">South Africa</div>
+            <div class="topic1 " data-query="br">Brazil</div>
+            <div class="topic1 " data-query="ar">Argentina</div>
+            <div class="topic1 " data-query="uk">United Kingdom</div>
+            <div class="topic1 " data-query="nz">New Zealand</div>
+            <div class="topic1 " data-query="sg">Singapore</div>
+            <div class="topic1 " data-query="kr">S. Korea</div>
+            <div class="topic1 " data-query="cn">China</div>
+            <div class="topic1 " data-query="mx">Mexico</div>
+            <div class="topic1" data-query="jp">Japan</div>
+            <div class="topic1" data-query="de">Germany</div>
+            <div class="topic1" data-query="be">Belgium</div>
+            <div class="topic1" data-query="id">Indonesia</div>
+            <div class="topic1" data-query="it">Italy</div>
+        </div>
+        <div class="gap about">
+            <img src="logo1.jpg" alt="" data-aos="fade-right"
+            data-aos-duration="1000">
+            <div class="wraptext" data-aos="fade-left"
+            data-aos-duration="1000">
+                <h2>About AlphaBites</h2>
+                <h4>AlphaBites co. is a open source global news distribution website made by team Alpha Flight in
+                    Ureckathon
+                    2023. There are primarily four sections, the first one decrypts most read articles of the day using
+                    WikiPedia API, the second one gives most read updates about certain domain (initialized with
+                    technology), third one gives most important headlines from news API, and fourth one gives what has
+                    happened on this day in history, again from WikiPedia.</h4>
+            </div>
+        </div>
+        <div class="gap team">
+            <h2>Our Team</h2>
+            <div class="teams">
+                <div class="card">
+                    <img src="team_img/sayak.PNG" alt="">
+                    <h5>Sayak Raha</h5>
+                    <h6>Leader of the Pack, Front-End Developer</h6>
+                    <button data-audio="sayak">Listen</button>
+                        <div class="socials">
+                            <i class="fa-brands fa-facebook" style="--clr: #3b5998"></i>
+                            <i class="fa-brands fa-instagram" style="--clr: #d62976"></i>
+                            <i class="fa-brands fa-github" style="--clr: #171515"></i>
+                            <i class="fa-brands fa-linkedin" style="--clr: #0A66C2"></i>
+                        </div>
+                </div>
+                <div class="card"><img src="team_img/argha.jpg" alt="">
+                    <h5>Argha Saha</h5>
+                    <h6>Firepower of the team, Designer</h6>
+                    <button data-audio="argha">Listen</button>
+                    <div class="socials">
+                        <i class="fa-brands fa-facebook" style="--clr: #3b5998"></i>
+                        <i class="fa-brands fa-instagram" style="--clr: #d62976"></i>
+                        <i class="fa-brands fa-github" style="--clr: #171515"></i>
+                        <i class="fa-brands fa-linkedin" style="--clr: #0A66C2"></i>
+                    </div>
+                </div>
+                <div class="card"><img src="team_img/swastika.jpg" alt="">
+                    <h5>Swastika Sen</h5>
+                    <h6>Soul of the Team, Designer</h6>
+                    <button data-audio="swastika">Listen</button>
+                    <div class="socials">
+                        <i class="fa-brands fa-facebook" style="--clr: #3b5998"></i>
+                        <i class="fa-brands fa-instagram" style="--clr: #d62976"></i>
+                        <i class="fa-brands fa-github" style="--clr: #171515"></i>
+                        <i class="fa-brands fa-linkedin" style="--clr: #0A66C2"></i>
+                    </div>
+                </div>
+                <div class="card"><img src="team_img/kingshuk.jpg" alt="">
+                    <h5>Kingshuk Bhowmick</h5>
+                    <h6>Backbone of the team, Back-End Developer</h6>
+                    <button data-audio="kingshuk">Listen</button>
+                    <div class="socials">
+                        <i class="fa-brands fa-facebook" style="--clr: #3b5998"></i>
+                        <i class="fa-brands fa-instagram" style="--clr: #d62976"></i>
+                        <i class="fa-brands fa-github" style="--clr: #171515"></i>
+                        <i class="fa-brands fa-linkedin" style="--clr: #0A66C2"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="gap footer">
+                <div class="cp">Copyright&#169; 2022 AlphaBites&#8482;, All rights reserved</div>
+                <div class="cp">Made with &hearts; by team Alpha Flight</div>
+            </div>
+
+    </section>
+
+
+
+    <script src="app.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

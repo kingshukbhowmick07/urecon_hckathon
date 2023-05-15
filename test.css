@@ -1,0 +1,725 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s;
+}
+
+html {
+    font-size: 57%;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.formdiv {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 45%;
+    /* background-color: aqua; */
+}
+
+.formdiv h2 {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    font-size: 2.8rem;
+    letter-spacing: 6.5px;
+    font-weight: bold;
+}
+
+.formdiv h1 {
+    position: absolute;
+    top: 11.4%;
+    left: 15%;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.formdiv h5 {
+    position: absolute;
+    top: 23%;
+    left: 15%;
+    font-size: 2rem;
+    margin-right: 15%;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: rgb(95, 95, 95);
+}
+
+.formbody {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 68vh;
+    /* background-color: blueviolet; */
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.formbody div {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+
+.formbody div span {
+    position: relative;
+    left: 15%;
+    font-size: 2rem;
+}
+
+.input {
+    position: relative;
+    left: 15%;
+    font-size: 1.6rem;
+    height: 4rem;
+    /* padding-left: 1rem; */
+    /* border-radius: 2rem; */
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid grey;
+    color: rgb(168, 168, 168);
+    transition: 1s;
+}
+
+.submit-btn {
+    width: 72%;
+    height: 4.2rem;
+    outline: none;
+    left: 14%;
+    position: absolute;
+    bottom: 25%;
+    background-image: linear-gradient(to right, #EEBC3B, #FF7A7A);
+    border: none;
+    border-radius: 2.1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.submit-btn:hover {
+    letter-spacing: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.521);
+}
+
+.formbody div input:active,
+.formbody div input:focus {
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+    color: black;
+}
+
+.formbody div input:valid {
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+    color: black;
+}
+
+.formbody div input::placeholder {
+    color: rgba(128, 128, 128, 0.493);
+}
+
+.sliderdiv {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    background-color: #FFC634;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#toprectgrp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    z-index: 999;
+}
+
+#toprectgrp rect {
+    transform: scaleY(1);
+    transition: 0.3s all;
+}
+
+#toprectgrp rect:hover {
+    transform: scaleY(0.95);
+}
+
+#downtrg {
+    position: absolute;
+    left: -3.7rem;
+    bottom: 0;
+    z-index: 10;
+    /* width: 25rem; */
+}
+
+#downtrg path {
+    transition: 0.2s all;
+}
+
+#downtrg path:hover {
+    fill: white;
+}
+
+#downrightgrp {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    /* width: 25rem; */
+}
+
+#toprightdesg {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    z-index: 10;
+    /* width: 25rem; */
+}
+
+#toprightdesg circle {
+    transition: 0.2s all;
+}
+
+#toprightdesg circle:hover {
+    fill: white;
+    r: 7;
+}
+
+#downrightgrp rect {
+    transform: scaleY(1);
+    transition: 0.3s all;
+}
+
+#downrightgrp rect:hover {
+    transform: scaleY(0.95);
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    z-index: auto;
+    flex-direction: column;
+}
+
+.swiper {
+    margin: 0 auto;
+}
+
+/* .card{
+    height: 20rem;
+    width: 14rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+  } */
+.wrap {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40rem;
+    width: 50rem;
+    justify-content: center;
+    /* background-color: white; */
+    flex-direction: column;
+    border-radius: 2rem;
+    /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.356); */
+}
+
+.wrapbtn {
+    width: 30%;
+    margin: 2rem auto;
+    border: none;
+    height: 5rem;
+    border-radius: 2.5rem;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    background-image: linear-gradient(to right, #ee3b94, #dd0e5d);
+    cursor: pointer;
+
+}
+
+.wrap h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: rgb(107, 49, 1);
+    font-weight: 500;
+}
+
+.wrap h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgb(172, 78, 2);
+    width: 100%;
+}
+
+.wrap h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    display: flex;
+    margin: 1.5rem auto;
+    /* border: 2px solid white; */
+    filter: drop-shadow(-5px -5px 5px #e7bc4e) drop-shadow(5px 5px 15px #ebac0f);
+    object-fit: cover;
+
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 14rem;
+    position: absolute;
+}
+
+.swiper-button-prev:after {
+    position: relative;
+    left: 3.5rem;
+}
+
+.swiper-button-next:after {
+    position: relative;
+    right: 3.5rem;
+}
+
+.swiper-pagination-bullet {
+    transition: 0.3s all;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: white;
+    width: 16px;
+    border-radius: 4px;
+}
+
+.socials {
+     position: absolute;
+    /* background-color: #ebac0f; */
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    bottom: 8%;
+}
+
+.socials a {
+    font-size: 2.2rem;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s;
+    box-shadow: none;
+    transform: translate(0px, 0px);
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+.socials a:active {
+    transform: translate(0px, 0px);
+    box-shadow: 1px 1px 0px black;
+
+
+}
+
+@media screen and (max-width:1300px) {
+    html {
+        font-size: 55%;
+    }
+
+    /* .formbody button{
+    bottom: 21%;
+}
+.formbody div{
+    position: relative;
+    gap: 1.3rem;
+} */
+}
+
+@media screen and (max-width:1100px) {
+    html {
+        font-size: 50%;
+    }
+
+    .sliderdiv {
+        overflow: hidden;
+    }
+
+    #downtrg {
+        width: 280px;
+        bottom: -14px;
+    }
+
+    #downrightgrp {
+        width: 250px;
+    }
+
+    #toprectgrp {
+        width: 240px;
+    }
+
+    .wrap h3 {
+        display: inline-block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .formbody {
+        bottom: -2rem;
+    }
+
+    .submit-btn {
+        bottom: 30%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    html {
+        font-size: 50%;
+    }
+
+    .formdiv h1 {
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sliderdiv {
+        overflow: hidden;
+        font-size: 45%;
+    }
+
+    #downtrg {
+        width: 220px;
+        bottom: -35px;
+        left: -3rem;
+    }
+
+    #downrightgrp {
+        width: 220px;
+        bottom: -42px;
+    }
+
+    #toprectgrp {
+        width: 210px;
+        top: -10px;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 18rem;
+    }
+
+    .swiper-button-next:after {
+        right: 1.5rem;
+    }
+
+    .swiper-button-prev:after {
+        left: 1.5rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    html {
+        font-size: 50%;
+    }
+
+    .formdiv h1 {
+        font-size: 4rem;
+    }
+
+    .sliderdiv {
+        overflow: hidden;
+        font-size: 45%;
+    }
+
+    #downtrg {
+        width: 220px;
+        bottom: -35px;
+        left: -3rem;
+    }
+
+    #downrightgrp {
+        width: 200px;
+        bottom: -42px;
+    }
+
+    #toprectgrp {
+        width: 180px;
+        top: -28px;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 18rem;
+    }
+
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-prev:after {
+        display: none;
+    }
+
+    .wrap h1 {
+        font-size: 2.5rem;
+    }
+
+    #toprightdesg {
+        width: 80px;
+        top: 0rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #downrightgrp {
+        width: 200px;
+        bottom: -42px;
+        right: -20px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .swiper {
+        display: none;
+    }
+
+    .formdiv {
+        position: absolute;
+        display: flex;
+        z-index: 100;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 68%;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.438));
+        height: 80%;
+        border: 2px solid rgba(255, 255, 255, 0.61);
+        backdrop-filter: blur(1px);
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formdiv>* {
+        backdrop-filter: blur(0px);
+    }
+
+    .formbody {
+        display: flex;
+        position: absolute;
+        bottom: auto;
+        height: 60%;
+        top: 28%;
+        left: 0;
+        /* background-color: aqua; */
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .formbody div {
+        gap: 0.5rem;
+    }
+
+    .formbody div input {
+        border-bottom: 1.5px solid rgb(29, 29, 29);
+    }
+
+    .formbody div input::placeholder {
+        color: rgba(22, 22, 22, 0.747);
+        transition: 0.3s;
+    }
+
+    .formbody div input:valid {
+        border-bottom: 1.5px solid rgb(30, 253, 0);
+        transition: 0.3s;
+    }
+
+    .formbody div input:focus {
+        border-bottom: 1.5px solid rgb(253, 17, 0);
+        transition: 0.3s;
+    }
+
+    .formbody div input:focus::placeholder {
+        color: rgba(44, 44, 44, 0.397);
+    }
+
+    .formbody button {
+        bottom: 4.5rem;
+    }
+
+    .formdiv h5 {
+        top: 18%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        left: auto;
+        right: auto;
+        color: rgb(0, 0, 0);
+        margin: 0 5rem;
+    }
+
+    .formdiv h1 {
+        position: absolute;
+        top: 5%;
+        left: auto;
+        right: auto;
+        margin: 0 0;
+        transform: translateX(0);
+    }
+
+    .sliderdiv {
+        width: 100%;
+        position: absolute;
+    }
+
+    .submit-btn {
+        position: absolute;
+        bottom: 10%;
+    }
+
+    #toprightdesg,
+    #downrightgrp,
+    #toprectgrp,
+    #downtrg {
+        z-index: 80;
+    }
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;
+    }
+
+    .formbody {
+        top: 32%;
+    }
+
+    .submit-btn {
+        bottom: 18%;
+    }
+
+    .formdiv h5 {
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .formdiv {
+        width: 75%;
+
+    }
+}
+
+@media screen and (max-width:390px) {
+    .formdiv h1 {
+        font-size: 4.5rem;
+        margin: 0 0;
+    }
+
+    .formdiv h5 {
+        margin: 0 2rem;
+    }
+
+    .input {
+        width: 75%;
+        left: 12.5%;
+    }
+
+    .formbody div span {
+        left: 12.5%;
+    }
+
+}
+
+@media screen and (max-width:345px) {
+
+    #downrightgrp {
+        width: 150px;
+    }
+
+    #downtrg {
+        width: 190px;
+        bottom: -45px;
+    }
+
+    .formdiv h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:332px) {
+
+    .formdiv h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media screen and (max-width:295px) {
+
+    .formdiv h1 {
+        font-size: 3.3rem;
+    }
+
+    .formdiv h5 {
+        top: 15%;
+        margin: 0 1rem;
+    }
+}
